@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <base href="/">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JSPM demo</title>
+        <meta name="description" content="JSPM demo">
+        <meta name="viewport" content="width=device-width">
+ 
+
+</head>
+
+<body>
+  <script src="../../jspm_packages/traceur-runtime.js"></script>
+  <script src="../../jspm_packages/es6-module-loader.js"></script>
+
+  <script src="../../jspm_packages/system.js"></script>
+  <script src="../../jspm.conf.js"></script>
+  <script>
+  System.import('app').then(function(m) { console.log(m); }, console.error.bind(console));
+  </script>
+</body>
+
+</html>

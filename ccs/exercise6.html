@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+  <meta name="description" content="AngularJSWorkshop: Exercise 6 Answer" />
+  <meta charset="utf-8">
+  <title>AngularJS</title>
+</head>
+
+<body ng-app="jsbin">
+
+  <div ng-controller="DemoCtrl">
+    <user current-user="loginState.currentUser" logged-in="loginState.loggedIn" /></user>
+    <login current-user="loginState.currentUser" logged-in="loginState.loggedIn" name="loginForm"></login>
+
+  </div>
+
+  <script type="text/ng-template" id="login.html">
+    <form name="{{ formName }}">
+      <label>Username: </label>
+      <input type="text" ng-model="username"></input>
+      <label>Password: </label>
+      <input type="password" ng-model="password"></input>
+      <button ng-click="login(username, password)">Login</button>
+    </form>
+  </script>
+
+  <script type="text/ng-template" id="currentUser.html">
+    <div ng-show="loggedIn">
+      <h1>Current User: {{ currentUser }}</h1>
+    </div>
+    <div ng-show="!loggedIn">
+      <h1>Not logged in</div>
+  </script>
+</body>
+
+</html>

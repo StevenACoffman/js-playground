@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.js" />
+  <meta name="description" content="AngularJS Workshop: Exercise 2" />
+  <title> JS Bin</title>
+</head>
+
+<body ng - app="workshop">
+  <form ng - controller="Ex1" name="calculator">
+    <input type="number" name="number" id="number" ng - model="number" required /> {{number}}
+    <div ng - show="number > 42"> Greater than 42
+    </div>
+
+    <div class="error" ng - show="calculator.number.$error.required || calculator.number.$error.number"> Invalid input
+    </div>
+
+  </form>
+</body>
+
+</html>

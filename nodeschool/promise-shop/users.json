@@ -1,0 +1,2925 @@
+/*
+Before you run this stuff we have to insert atleast the person who run this thing into Database manually as we cannot perform this operation with him able to login into the system.
+*/
+
+/* SQL here:
+Insert into ADMINISTRATIVE_USER (ID,UNIQNAME,ROLE,CREATE_DATE,CREATED_BY,UPDATE_DATE,UPDATED_BY) values (ADMINISTRATIVE_USER_SEQ.nextval,'kondam','ADMIN',sysdate,'admin',sysdate,'gears');
+*/
+
+/* POST: https://test.umms.med.umich.edu/amadeus/admin/administrative-user/list */
+
+
+[
+    {
+        "uniqname": "edwardsm",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine"
+            }
+        ]
+    },
+    {
+        "uniqname": "dlcarson",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            }
+        ]
+    },
+    {
+        "uniqname": "laperry",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            }
+        ]
+    },
+    {
+        "uniqname": "atkinsk",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            }
+        ]
+    },
+    {
+        "uniqname": "jkin",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            }
+        ]
+    },
+    {
+        "uniqname": "marshals",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            }
+        ]
+    },
+    {
+        "uniqname": "bonitab",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            }
+        ]
+    },
+    {
+        "uniqname": "cmcgover",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            }
+        ]
+    },
+    {
+        "uniqname": "rebwilso",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            }
+        ]
+    },
+    {
+        "uniqname": "kwhitney",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            }
+        ]
+    },
+    {
+        "uniqname": "kendahl",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            }
+        ]
+    },
+    {
+        "uniqname": "stobias",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            }
+        ]
+    },
+    {
+        "uniqname": "postmac",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            }
+        ]
+    },
+    {
+        "uniqname": "blange",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            }
+        ]
+    },
+    {
+        "uniqname": "carscott",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            }
+        ]
+    },
+    {
+        "uniqname": "aamlong",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            }
+        ]
+    },
+    {
+        "uniqname": "effergie",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            }
+        ]
+    },
+    {
+        "uniqname": "twileyr",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and Rehab"
+            }
+        ]
+    },
+    {
+        "uniqname": "bweihe",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            }
+        ]
+    },
+    {
+        "uniqname": "acolvin",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            }
+        ]
+    },
+    {
+        "uniqname": "cdiuri",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            }
+        ]
+    },
+    {
+        "uniqname": "susier",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            }
+        ]
+    },
+    {
+        "uniqname": "lwoodman",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "cerovski",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            }
+        ]
+    },
+    {
+        "uniqname": "susastok",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            }
+        ]
+    },
+    {
+        "uniqname": "pfunderb",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            }
+        ]
+    },
+    {
+        "uniqname": "jgiletto",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            }
+        ]
+    },
+    {
+        "uniqname": "baxtera",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            }
+        ]
+    },
+    {
+        "uniqname": "sgenske",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            }
+        ]
+    },
+    {
+        "uniqname": "irenespo",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            }
+        ]
+    },
+    {
+        "uniqname": "akumagai",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            }
+        ]
+    },
+    {
+        "uniqname": "benluc",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            }
+        ]
+    },
+    {
+        "uniqname": "bwudcock",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            }
+        ]
+    },
+    {
+        "uniqname": "camurphy",
+        "role": "REGISTRAR",
+        "associatedDepartments": [
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            }
+        ]
+    },
+    {
+        "uniqname": "clcraig",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            }
+        ]
+    },
+    {
+        "uniqname": "dbelmont",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            }
+        ]
+    },
+    {
+        "uniqname": "dgelb",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            }
+        ]
+    },
+    {
+        "uniqname": "dhamm",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            }
+        ]
+    },
+    {
+        "uniqname": "dipietro",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            }
+        ]
+    },
+    {
+        "uniqname": "lequint",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            }
+        ]
+    },
+    {
+        "uniqname": "englesbe",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            }
+        ]
+    },
+    {
+        "uniqname": "gfaerber",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "grum",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine"
+            }
+        ]
+    },
+    {
+        "uniqname": "gsrd",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            }
+        ]
+    },
+    {
+        "uniqname": "immaya",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            }
+        ]
+    },
+    {
+        "uniqname": "jheth",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            }
+        ]
+    },
+    {
+        "uniqname": "jmoyer",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            }
+        ]
+    },
+    {
+        "uniqname": "johuang",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            }
+        ]
+    },
+    {
+        "uniqname": "jonamch",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            }
+        ]
+    },
+    {
+        "uniqname": "joshouse",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            }
+        ]
+    },
+    {
+        "uniqname": "cemal",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            }
+        ]
+    },
+    {
+        "uniqname": "joshuav",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            }
+        ]
+    },
+    {
+        "uniqname": "ksheets",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            }
+        ]
+    },
+    {
+        "uniqname": "percival",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and Rehab"
+            }
+        ]
+    },
+    {
+        "uniqname": "yolanda",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            }
+        ]
+    },
+    {
+        "uniqname": "lgruppen",
+        "role": "DIRECTOR",
+        "associatedDepartments": [
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy",
+                "primary" : true
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            }
+        ]
+    },
+    {
+        "uniqname": "dmharris",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education",
+                "primary" : true
+            },
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            }
+        ]
+    },
+    {
+        "uniqname": "tbas",
+        "role": "COORDINATOR",
+        "associatedDepartments": [
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine",
+                "primary" : true
+            }
+        ]
+    },
+    {
+        "uniqname": "cdnapier",
+        "role": "REGISTRAR",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "purkissj",
+        "role": "ADMIN",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "bibler",
+        "role": "ADMIN",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "milljill",
+        "role": "ADMIN",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "juyang",
+        "role": "ADMIN",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "sjweir",
+        "role": "ADMIN",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "ssanten",
+        "role": "ADMIN",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "jepatton",
+        "role": "ADMIN",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "clbraun",
+        "role": "ADMIN",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "lmyklebu",
+        "role": "ADMIN",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "farrisg",
+        "role": "ADMIN",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "johnwsch",
+        "role": "ADMIN",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "kondam",
+        "role": "ADMIN",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "gears",
+        "role": "ADMIN",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "vellaand",
+        "role": "ADMIN",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "cbarco",
+        "role": "ADMIN",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "hzieske",
+        "role": "ADMIN",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "myoneta",
+        "role": "ADMIN",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "tjbelli",
+        "role": "ADMIN",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    },
+    {
+        "uniqname": "ggraziol",
+        "role": "ADMIN",
+        "associatedDepartments": [
+
+            {
+                "code": "ANATOMY",
+                "description": "Anatomy"
+            },
+            {
+                "code": "ANESTH",
+                "description": "Anesthesia"
+            },
+            {
+                "code": "BIOLCHEM",
+                "description": "Biological Chemistry"
+            },
+            {
+                "code": "DERM",
+                "description": "Dermatology"
+            },
+            {
+                "code": "EMERGMED",
+                "description": "Emergency Medicine"
+            },
+            {
+                "code": "FAMMED",
+                "description": "Family Medicine"
+            },
+            {
+                "code": "INTMED",
+                "description": "Internal Medicine",
+                "primary" : true
+            },
+            {
+                "code": "MEDADM",
+                "description": "Medical School Administration"
+            },
+            {
+                "code": "MEDEDUC",
+                "description": "Medical Education"
+            },
+            {
+                "code": "MEDICINE",
+                "description": "Medicine"
+            },
+            {
+                "code": "MEDPH",
+                "description": "Medical Public Health"
+            },
+            {
+                "code": "NEUROL",
+                "description": "Neurology"
+            },
+            {
+                "code": "NEUSURG",
+                "description": "Neurosurgery"
+            },
+            {
+                "code": "OBSTGYN",
+                "description": "Obstetrics and Gynecology"
+            },
+            {
+                "code": "OPHTH",
+                "description": "Ophthalmology"
+            },
+            {
+                "code": "ORTHSURG",
+                "description": "Orthopaedic Surgery"
+            },
+            {
+                "code": "OTO",
+                "description": "Otorhinolaryngology"
+            },
+            {
+                "code": "PATH",
+                "description": "Pathology"
+            },
+            {
+                "code": "PEDIAT",
+                "description": "Pediatrics"
+            },
+            {
+                "code": "PHRMACOL",
+                "description": "Pharmacology"
+            },
+            {
+                "code": "PHYSIOL",
+                "description": "Physiology"
+            },
+            {
+                "code": "PMR",
+                "description": "Physical Medicine and  Rehab"
+            },
+            {
+                "code": "PSYCHIAT",
+                "description": "Psychiatry"
+            },
+            {
+                "code": "RADIOL",
+                "description": "Radiology"
+            },
+            {
+                "code": "RADONCO",
+                "description": "Radiation Oncology"
+            },
+            {
+                "code": "SURGERY",
+                "description": "Surgery"
+            },
+            {
+                "code": "UROLOGY",
+                "description": "Urology"
+            }
+        ]
+    }
+]

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+  <meta name="description" content="AngularJS Workshop: Exercise 3" />
+  <meta charset="utf-8">
+  <title>AngularJS</title>
+</head>
+
+<body ng-app="jsbin">
+  <div ng-controller="DefaultCtrl">
+    <ul>
+      <li ng-repeat="Obj in names">
+        <input ng-model="Obj.name" />
+      </li>
+    </ul>
+    <ul>
+      <li ng-repeat="Obj in names">
+        <span>{{ Obj.name }}</span>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

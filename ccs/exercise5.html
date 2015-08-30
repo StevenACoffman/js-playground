@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+  <meta name="description" content="AngularJS Workshop: Exercise 5" />
+  <meta charset="utf-8">
+  <title>AngularJS</title>
+</head>
+
+<body ng-app="jsbin">
+  <div ng-controller="DefaultCtrl">
+    <ul>
+      <li ng-repeat="customer in customers">
+        <customer info="customer"></customer>
+      </li>
+    </ul>
+    <div>The Best Customer:
+      <customer info="theBestCustomer"></customer>
+      <!-- Should show "theBestCustomer" -->
+    </div>
+    <div>The Second Best Customer:
+      <customer info="theSecondBestCustomer"></customer>
+      <!-- Should show "theSecondBestCustomer" -->
+    </div>
+  </div>
+</body>
+
+</html>
